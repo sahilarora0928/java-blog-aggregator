@@ -1,5 +1,8 @@
 package cz.jiripinkas.jba.entity;
 
+import java.util.Date;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +22,7 @@ public class Item {
 	private String description;
 	
 	@Column(name="published_date")
-	private String publishedDate;
+	private Date publishedDate;
 	
 	private String link;
 
@@ -60,11 +63,11 @@ public class Item {
 		this.description = description;
 	}
 
-	public String getPublishedDate() {
+	public Date getPublishedDate() {
 		return publishedDate;
 	}
 
-	public void setPublishedDate(String publishedDate) {
+	public void setPublishedDate(Date publishedDate) {
 		this.publishedDate = publishedDate;
 	}
 
